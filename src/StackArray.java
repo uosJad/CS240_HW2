@@ -9,7 +9,7 @@ public final class StackArray<T> implements StackInterface<T>{
 	private T[] arr;
 	private int numOfItems; // numOfItems - 1 = index of last item in
 	
-	private final static int DEFAULT_SIZE = 10;
+	private static final int DEFAULT_SIZE = 10;
 	
 	public StackArray(){
 		this(DEFAULT_SIZE);
@@ -20,12 +20,12 @@ public final class StackArray<T> implements StackInterface<T>{
 		@SuppressWarnings("unchecked")
 		T[] temp = (T[])new Object[s];
 		arr = temp;
-		numOfItems= 0;
+		numOfItems = 0;
 	}
 	
 	@Override
 	public void push(T newEntry) {
-		if (numOfItems + 1 <= arr.length){
+		if (numOfItems < arr.length){
 			arr[numOfItems] = newEntry;
 			numOfItems++;
 		}
@@ -62,6 +62,18 @@ public final class StackArray<T> implements StackInterface<T>{
 		for (int i = 0; i < numOfItems; i++){
 			pop();
 		}
+	}
+	
+	/**
+	 * @return copy of array
+	 */
+	public T[] toArray(){
+		@SuppressWarnings("unchecked")
+		T[] temp = (T[])new Object[arr.length];
+		for (int i = 0; i < arr.length; i++){
+			temp[i] = arr[i];
+		}
+		return temp;
 	}
 
 }
