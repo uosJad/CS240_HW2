@@ -10,8 +10,6 @@ public final class QueueNode<T> implements QueueInterface<T> {
 		numOfItems = 0;
 	}
 	
-	
-	
 	private class Node{
 		T data;
 		Node adr;
@@ -21,7 +19,6 @@ public final class QueueNode<T> implements QueueInterface<T> {
 			adr = a;
 		}
 	}
-	
 	
 	@Override
 	public void enqueue(T newEntry) {
@@ -39,7 +36,6 @@ public final class QueueNode<T> implements QueueInterface<T> {
 	public T dequeue() {
 		T tempReturn = null;
 		if (!isEmpty()){
-			
 			if (numOfItems == 1){
 				tempReturn= front.data;
 				front = null;
@@ -60,7 +56,6 @@ public final class QueueNode<T> implements QueueInterface<T> {
 					{
 						temp = temp.adr;
 					}
-
 				}
 			}
 		}
