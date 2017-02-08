@@ -60,7 +60,7 @@ public class StackNode<T> implements StackInterface<T> {
 		boolean result = false;
 		if (lastNode == null)
 			result = true;
-		return false;
+		return result;
 	}
 
 	@Override

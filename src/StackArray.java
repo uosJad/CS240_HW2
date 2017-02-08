@@ -54,7 +54,7 @@ public final class StackArray<T> implements StackInterface<T>{
 		boolean result = false;
 		if (numOfItems <= 0)
 			result = true;
-		return false;
+		return result;
 	}
 
 	@Override

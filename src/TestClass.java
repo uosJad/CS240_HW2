@@ -5,8 +5,8 @@ public class TestClass {
 
 	public static void main(String[] args) {
 		//stackArrayTest();
-		//stackTest();
-		queueTest();
+		stackTest();
+		//queueTest();
 		
 		
 		
@@ -48,9 +48,9 @@ public class TestClass {
 	}
 	
 	public static void stackTest(){
-		//StackInterface<Integer> tempSA = new StackArray<>();
+		StackInterface<Integer> tempSA = new StackArray<>();
 		//StackInterface<Integer> tempSA = new StackVector<>();
-		StackInterface<Integer> tempSA = new StackNode<>();
+		//StackInterface<Integer> tempSA = new StackNode<>();
 		
 		System.out.print("push 12 (last 2 are not added): ");
 		for (int i = 0; i < 12; i++){
@@ -62,7 +62,7 @@ public class TestClass {
 		//System.out.println(tempSA.pop());
 		
 		System.out.print("Popped 5: ");
-		for (int i = 0; i < 5; i++){
+		for (int i = 0; i < 12; i++){
 			System.out.print(tempSA.pop()+ " ");
 		}
 		System.out.println();

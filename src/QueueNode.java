@@ -31,15 +31,17 @@ public class QueueNode<T> implements QueueInterface<T> {
 			if (front == null){
 				front = temp;
 			}
+			numOfItems++;
 		}
 	}
 
 	@Override
 	public T dequeue() {
-		T tempReturn = front.data;
+		T tempReturn = null;
 		if (!isEmpty()){
 			
 			if (numOfItems == 1){
+				tempReturn= front.data;
 				front = null;
 				back = null;
 				numOfItems--;	
@@ -48,6 +50,7 @@ public class QueueNode<T> implements QueueInterface<T> {
 				Node temp = back;
 				for (int i = 0; i < numOfItems; i++){
 					if (temp.adr == front){ // if found node pointing to front
+						tempReturn= front.data;
 						front = temp;
 						front.adr = null;
 						numOfItems--;

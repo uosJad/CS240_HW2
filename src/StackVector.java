@@ -19,7 +19,10 @@ public class StackVector<T> implements StackInterface<T>{
 
 	@Override
 	public T pop() {
-		return v.remove(v.size()-1);
+		T temp = null;
+		if (!isEmpty())
+			temp = v.remove(v.size()-1);
+		return temp;
 	}
 
 	@Override
