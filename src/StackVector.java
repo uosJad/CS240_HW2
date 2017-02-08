@@ -13,13 +13,13 @@ public class StackVector<T> implements StackInterface<T>{
 	
 	@Override
 	public void push(T newEntry) {
-		if (v.capacity() < MAX_SIZE)
+		if (v.size() < MAX_SIZE)
 			v.add(newEntry);
 	}
 
 	@Override
 	public T pop() {
-		return v.remove(v.capacity()-1);
+		return v.remove(v.size()-1);
 	}
 
 	@Override
@@ -37,10 +37,19 @@ public class StackVector<T> implements StackInterface<T>{
 		v.clear();
 	}
 
-	@Override
+	@SuppressWarnings("unchecked")
 	public T[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		T[] temp = null;
+		
+		if (!isEmpty()){
+			
+			temp = (T[])new Object[v.size()]; 
+			for (int i = 0; i < v.size(); i++){
+				temp[i] = v.get(i);
+			}
+		}
+		
+		return temp;
 	}
 
 	
