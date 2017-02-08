@@ -15,7 +15,8 @@ public class TestClass {
 	}
 	
 	public static void queueTest() {
-		QueueInterface<Integer> tempQ = new QueueArray<>();
+		//QueueInterface<Integer> tempQ = new QueueArray<>();
+		QueueInterface<Integer> tempQ = new QueueNode<>();
 		
 		System.out.print("queue 12 (last 2 are not added): ");
 		for (int i = 0; i < 12; i++){
@@ -25,8 +26,8 @@ public class TestClass {
 		}
 		System.out.println();
 		
-		System.out.print("dequeue 5: ");
-		for (int i = 0; i < 5; i++){
+		System.out.print("dequeue 12: ");
+		for (int i = 0; i < 12; i++){
 			System.out.print(tempQ.dequeue()+ " ");
 		}
 		System.out.println();
