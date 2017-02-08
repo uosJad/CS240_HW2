@@ -1,5 +1,5 @@
 
-public class QueueArray<T> implements QueueInterface<T> {
+public final class QueueArray<T> implements QueueInterface<T> {
 	T[] arr;
 	
 	private int front;

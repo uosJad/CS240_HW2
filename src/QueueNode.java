@@ -1,5 +1,5 @@
 
-public class QueueNode<T> implements QueueInterface<T> {
+public final class QueueNode<T> implements QueueInterface<T> {
 
 	private Node front, back;
 	private int numOfItems;

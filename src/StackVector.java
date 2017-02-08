@@ -1,7 +1,7 @@
 import java.util.Vector;
 
 
-public class StackVector<T> implements StackInterface<T>{
+public final class StackVector<T> implements StackInterface<T>{
 
 	private Vector<T> v;
 	

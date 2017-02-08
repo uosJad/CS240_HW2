@@ -1,5 +1,5 @@
 
-public class StackNode<T> implements StackInterface<T> {
+public final class StackNode<T> implements StackInterface<T> {
 	private Node lastNode;
 	private int numOfItems;
 	

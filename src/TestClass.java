@@ -5,8 +5,8 @@ public class TestClass {
 
 	public static void main(String[] args) {
 		//stackArrayTest();
-		stackTest();
-		//queueTest();
+		//stackTest();
+		queueTest();
 		
 		
 		
@@ -16,7 +16,8 @@ public class TestClass {
 	
 	public static void queueTest() {
 		//QueueInterface<Integer> tempQ = new QueueArray<>();
-		QueueInterface<Integer> tempQ = new QueueNode<>();
+		//QueueInterface<Integer> tempQ = new QueueNode<>();
+		QueueInterface<Integer> tempQ = new QueueCircularLink<>();
 		
 		System.out.print("queue 12 (last 2 are not added): ");
 		for (int i = 0; i < 12; i++){
@@ -33,7 +34,7 @@ public class TestClass {
 		System.out.println();
 		
 		System.out.print("queue 5: ");
-		for (int i = 0; i < 5; i++){
+		for (int i = 0; i < 7; i++){
 			int t = new Random().nextInt(100);
 			tempQ.enqueue(t);
 			System.out.print(t+ " ");
