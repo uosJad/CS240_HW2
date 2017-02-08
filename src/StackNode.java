@@ -1,4 +1,7 @@
-
+/**
+ * @author Jason Wu
+ * @param <T> generic
+ */
 public final class StackNode<T> implements StackInterface<T> {
 	private Node lastNode;
 	private int numOfItems;

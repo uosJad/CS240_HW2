@@ -7,11 +7,6 @@ public class TestClass {
 		//stackArrayTest();
 		//stackTest();
 		queueTest();
-		
-		
-		
-		
-		
 	}
 	
 	public static void queueTest() {

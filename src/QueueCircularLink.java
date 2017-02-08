@@ -1,4 +1,7 @@
-
+/**
+ * @author Jason Wu
+ * @param <T> generic
+ */
 public final class QueueCircularLink<T>  implements QueueInterface<T>{
 	private Node free, back;
 	private int numOfItems;

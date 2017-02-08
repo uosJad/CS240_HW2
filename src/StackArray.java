@@ -1,9 +1,6 @@
 /**
- *
- * Array implementation of stack ADT
  * @author Jason Wu
- *
- * @param <T> generic data type
+ * @param <T> generic
  */
 public final class StackArray<T> implements StackInterface<T>{
 	private T[] arr;

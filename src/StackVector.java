@@ -1,6 +1,9 @@
 import java.util.Vector;
 
-
+/**
+ * @author Jason Wu
+ * @param <T> generic
+ */
 public final class StackVector<T> implements StackInterface<T>{
 
 	private Vector<T> v;

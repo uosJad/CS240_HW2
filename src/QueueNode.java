@@ -1,4 +1,7 @@
-
+/**
+ * @author Jason Wu
+ * @param <T> generic
+ */
 public final class QueueNode<T> implements QueueInterface<T> {
 
 	private Node front, back;

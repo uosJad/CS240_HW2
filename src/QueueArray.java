@@ -1,4 +1,7 @@
-
+/**
+ * @author Jason Wu
+ * @param <T> generic
+ */
 public final class QueueArray<T> implements QueueInterface<T> {
 	T[] arr;
 	
