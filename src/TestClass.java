@@ -5,7 +5,7 @@ public class TestClass {
 
 	public static void main(String[] args) {
 		//stackArrayTest();
-		vectorStackTest();
+		//stackTest();
 		
 		
 		
@@ -14,11 +14,13 @@ public class TestClass {
 		
 	}
 	
-	public static void vectorStackTest(){
-		// test stack array
-		StackInterface<Integer> tempSA = new StackVector<>();
+	public static void stackTest(){
+		//StackInterface<Integer> tempSA = new StackArray<>();
+		//StackInterface<Integer> tempSA = new StackVector<>();
+		StackInterface<Integer> tempSA = new StackNode<>();
 		
-		for (int i = 0; i < 10; i++){
+		System.out.print("push 12 (last 2 are not added to stack due to size limit): ");
+		for (int i = 0; i < 12; i++){
 			int t = new Random().nextInt(100);
 			tempSA.push(t);
 			System.out.print(t+ " ");
@@ -26,11 +28,13 @@ public class TestClass {
 		System.out.println();
 		//System.out.println(tempSA.pop());
 		
+		System.out.print("Popped 5: ");
 		for (int i = 0; i < 5; i++){
 			System.out.print(tempSA.pop()+ " ");
 		}
 		System.out.println();
 		
+		System.out.print("Pushed 5: ");
 		for (int i = 0; i < 5; i++){
 			int t = new Random().nextInt(100);
 			tempSA.push(t);
@@ -38,38 +42,8 @@ public class TestClass {
 		}
 		
 		System.out.println();
-
-		for (int i = 0; i < 10; i++){
-			System.out.print(tempSA.pop()+ " ");
-		}
-	}
-	
-	
-	public static void stackArrayTest(){
-		// test stack array
-		StackInterface<Integer> tempSA = new StackArray<>();
 		
-		for (int i = 0; i < 10; i++){
-			int t = new Random().nextInt(100);
-			tempSA.push(t);
-			System.out.print(t+ " ");
-		}
-		System.out.println();
-		//System.out.println(tempSA.pop());
-		
-		for (int i = 0; i < 5; i++){
-			System.out.print(tempSA.pop()+ " ");
-		}
-		System.out.println();
-		
-		for (int i = 0; i < 5; i++){
-			int t = new Random().nextInt(100);
-			tempSA.push(t);
-			System.out.print(t+ " ");
-		}
-		
-		System.out.println();
-
+		System.out.print("Pop all: ");
 		for (int i = 0; i < 10; i++){
 			System.out.print(tempSA.pop()+ " ");
 		}

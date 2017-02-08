@@ -21,13 +21,6 @@ public class StackNode<T> implements StackInterface<T> {
 			adr = a;
 		}
 		
-		public void setData(T d){
-			data = d;
-		}
-		
-		public void setAdr(Node a){
-			adr = a;
-		}
 	}
 
 	@Override
@@ -48,6 +41,7 @@ public class StackNode<T> implements StackInterface<T> {
 			lastNode = temp.adr;
 			temp.adr = null;
 			tempData = temp.data;
+			numOfItems--;
 		}
 		return tempData;
 	}
@@ -74,10 +68,19 @@ public class StackNode<T> implements StackInterface<T> {
 		lastNode = null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		T[] temp = null;
+		if (!isEmpty()){
+			Node tempPointer = lastNode;
+			temp = (T[])new Object[numOfItems];
+			for(int i = numOfItems - 1; i >= 0; i--){
+				temp[i] = tempPointer.data;
+				tempPointer = tempPointer.adr;
+			}
+		}
+		return temp;
 	}
 	
 }
